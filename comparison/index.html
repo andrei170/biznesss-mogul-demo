@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sheikera Coutain &middot; Before vs After &middot; AG1 Consulting</title>
+<meta name="description" content="Two businesses. Two pipelines. One personal brand. The dual-credential moat invisible to AI search across both verticals. Audit + 90-day plan.">
+<meta property="og:title" content="Sheikera Coutain &middot; Before vs After">
+<meta property="og:description" content="Ginger LuxeReal + The Biznesss Mogul. The PMP + Six Sigma + MBA + REALTOR + DEI moat that AI search has never heard of. Here's what we'd fix.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #eeede9;
+  --bg-elevated: #ffffff;
+  --bg-card: #f6f4ee;
+  --bg-deep: #23423d;
+  --teal: #23423d;
+  --teal-bright: #2f5a52;
+  --teal-deep: #162d29;
+  --gold: #eeba2b;
+  --gold-bright: #f5c84d;
+  --coral: #fa9d93;
+  --coral-deep: #ea8d83;
+  --ink: #1a1a1a;
+  --ink-dim: #4a4a4a;
+  --muted: #848484;
+  --line: rgba(35, 66, 61, 0.14);
+  --line-strong: rgba(35, 66, 61, 0.32);
+  --red-x: #b04a3a;
+  --green-check: #4a7a5e;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* Top bar */
+.topbar { background: var(--teal-deep); color: rgba(238,237,233,0.92); padding: 10px 0; font-size: 13px; }
+.topbar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.topbar-tag { color: var(--gold); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 11px; }
+
+.hero { padding: 100px 0 80px; background: var(--bg); position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: 5%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(238, 186, 43, 0.06), transparent 65%); filter: blur(60px); pointer-events: none; }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 32px; position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); font-weight: 700; margin-bottom: 24px; display: block; }
+.hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(44px, 6.5vw, 88px); line-height: 1; letter-spacing: -0.02em; margin-bottom: 32px; color: var(--teal); }
+.hero h1 em { font-style: italic; color: var(--coral-deep); }
+.hero p { color: var(--ink-dim); font-size: 19px; max-width: 720px; line-height: 1.55; }
+
+.section { padding: 80px 0; position: relative; }
+.section.alt { background: var(--bg-elevated); }
+.section.dark { background: var(--bg-deep); color: rgba(238,237,233,0.92); }
+.section.dark .section-title { color: #fff; }
+.section.dark .section-sub { color: rgba(238,237,233,0.78); }
+.section-title { font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 4vw, 56px); letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 16px; color: var(--teal); }
+.section-title em { font-style: italic; color: var(--coral-deep); }
+.section.dark .section-title em { color: var(--gold); }
+.section-sub { color: var(--ink-dim); font-size: 17px; margin-bottom: 56px; max-width: 720px; line-height: 1.6; }
+
+/* Compare cards */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.compare-card { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg-elevated); transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s; }
+.compare-card:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(35, 66, 61, 0.10); }
+.compare-label { padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; }
+.compare-label.current { background: rgba(176, 74, 58, 0.08); color: var(--red-x); border-bottom: 1px solid rgba(176, 74, 58, 0.18); }
+.compare-label.new { background: rgba(35, 66, 61, 0.08); color: var(--teal); border-bottom: 1px solid var(--line); }
+.compare-preview { aspect-ratio: 16/10; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.compare-preview-content { position: relative; z-index: 2; text-align: center; padding: 32px; }
+.compare-preview-content h3 { font-family: var(--serif); font-style: italic; font-size: 32px; font-weight: 500; letter-spacing: -0.01em; }
+.compare-preview-content p { font-size: 14px; margin-top: 12px; }
+.compare-preview.current-bg { background: linear-gradient(135deg, var(--bg-card), var(--bg)); }
+.compare-preview.current-bg .compare-preview-content h3 { color: var(--teal); }
+.compare-preview.current-bg .compare-preview-content p { color: var(--ink-dim); }
+.compare-preview.new-bg { background: linear-gradient(135deg, var(--teal), var(--teal-bright)); }
+.compare-preview.new-bg .compare-preview-content h3 { color: var(--gold); }
+.compare-preview.new-bg .compare-preview-content p { color: rgba(238,237,233,0.78); }
+.compare-body { padding: 28px 32px; }
+.compare-body h4 { font-family: var(--serif); font-size: 24px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.01em; color: var(--teal); }
+.compare-body p { color: var(--ink-dim); font-size: 14px; margin-bottom: 20px; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li { padding: 6px 0; font-size: 14px; color: var(--ink-dim); display: flex; align-items: flex-start; gap: 10px; }
+.compare-body li::before { font-size: 12px; margin-top: 2px; flex-shrink: 0; font-weight: 700; }
+.current li::before { content: '\2717'; color: var(--red-x); }
+.new li::before { content: '\2713'; color: var(--green-check); }
+.compare-cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.25s; }
+.cta-current { border: 1px solid rgba(176, 74, 58, 0.4); color: var(--red-x); }
+.cta-current:hover { background: rgba(176, 74, 58, 0.06); }
+.cta-new { background: var(--teal); color: #fff; }
+.cta-new:hover { background: var(--teal-bright); }
+
+/* Bombshell */
+.bombshell-section { background: var(--teal-deep); color: rgba(238,237,233,0.92); }
+.bombshell-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: center; }
+.bombshell-stat { font-family: var(--serif); font-size: clamp(80px, 14vw, 200px); font-weight: 500; line-height: 1; color: var(--gold); letter-spacing: -0.025em; }
+.bombshell-stat em { font-style: italic; color: var(--coral); }
+.bombshell-stat-label { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(238,237,233,0.55); margin-top: 18px; }
+.bombshell-content h2 { font-family: var(--serif); font-size: clamp(32px, 4vw, 56px); font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 24px; color: #fff; }
+.bombshell-content h2 em { font-style: italic; color: var(--gold); }
+.bombshell-content p { color: rgba(238,237,233,0.78); font-size: 17px; line-height: 1.7; margin-bottom: 16px; }
+.bombshell-content p strong { color: #fff; font-weight: 600; }
+.queries-list { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(238, 186, 43, 0.18); }
+.queries-list-section { padding: 8px 0; }
+.queries-list-section-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; display: block; }
+.query-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 10px 0; font-size: 14px; color: rgba(238,237,233,0.7); border-bottom: 1px solid rgba(238, 186, 43, 0.08); }
+.query-item:last-child { border-bottom: none; }
+.query-x { color: var(--coral); font-weight: 700; font-size: 16px; flex-shrink: 0; }
+
+/* Dual-credential moat */
+.moat-section { background: var(--bg); position: relative; overflow: hidden; }
+.moat-section::before { content: ''; position: absolute; bottom: -20%; left: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(238, 186, 43, 0.10), transparent 65%); filter: blur(60px); }
+.moat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; margin-top: 40px; }
+.moat-card { padding: 48px 40px; background: var(--bg-elevated); border: 1px solid var(--line); border-radius: 8px; position: relative; }
+.moat-card.luxereal::before { content: 'GINGER LUXEREAL'; position: absolute; top: 24px; right: 24px; font-size: 10px; letter-spacing: 0.22em; color: var(--teal); padding: 4px 10px; border: 1px solid var(--line-strong); border-radius: 100px; background: var(--bg); font-weight: 700; }
+.moat-card.mogul::before { content: 'BIZNESSS MOGUL'; position: absolute; top: 24px; right: 24px; font-size: 10px; letter-spacing: 0.22em; color: var(--coral-deep); padding: 4px 10px; border: 1px solid rgba(234, 141, 131, 0.4); border-radius: 100px; background: rgba(250, 157, 147, 0.06); font-weight: 700; }
+.moat-card h3 { font-family: var(--serif); font-size: 28px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.01em; color: var(--teal); }
+.moat-card .moat-sub { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--ink-dim); margin-bottom: 24px; }
+.moat-card ul { list-style: none; }
+.moat-card li { color: var(--ink-dim); font-size: 14px; padding: 6px 0; padding-left: 24px; position: relative; }
+.moat-card li::before { content: '\2731'; color: var(--gold); position: absolute; left: 0; top: 6px; font-size: 11px; }
+.moat-card li.unique { color: var(--teal); font-weight: 600; }
+.moat-card li.unique::before { content: '\2605'; color: var(--coral-deep); }
+
+/* Plan summary */
+.plan-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 40px; }
+.plan-card { padding: 36px 32px; background: var(--bg-elevated); border: 1px solid var(--line); border-radius: 6px; transition: all 0.3s; position: relative; }
+.plan-card:hover { border-color: var(--teal); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(35, 66, 61, 0.08); }
+.plan-num { font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--coral-deep); font-weight: 600; margin-bottom: 16px; display: block; letter-spacing: 0.05em; }
+.plan-card h4 { font-family: var(--serif); font-size: 24px; font-weight: 500; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.01em; color: var(--teal); }
+.plan-card p { color: var(--ink-dim); font-size: 14px; line-height: 1.6; }
+.plan-week { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-bright); font-weight: 700; margin-top: 16px; display: inline-block; }
+
+/* Scorecard */
+.scorecard { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg-elevated); }
+.scorecard-header { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 24px 32px; background: var(--bg-card); border-bottom: 1px solid var(--line); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 700; color: var(--ink-dim); }
+.scorecard-row { display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 18px 32px; border-bottom: 1px solid var(--line); align-items: center; }
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: var(--bg-card); }
+.scorecard-label { font-size: 15px; color: var(--teal); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--red-x); }
+.scorecard-cell.new { color: var(--green-check); font-weight: 600; }
+
+.cta-section { padding: 120px 0; text-align: center; background: var(--bg); }
+.cta-section h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 500; letter-spacing: -0.025em; margin-bottom: 24px; line-height: 1.05; color: var(--teal); }
+.cta-section h2 em { font-style: italic; color: var(--coral-deep); }
+.cta-section p { color: var(--ink-dim); font-size: 17px; margin-bottom: 40px; max-width: 580px; margin-left: auto; margin-right: auto; }
+.cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.cta-button { display: inline-flex; align-items: center; gap: 8px; padding: 18px 36px; border-radius: 4px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.25s; }
+.cta-button.primary { background: var(--teal); color: #fff; }
+.cta-button.primary:hover { background: var(--teal-bright); transform: translateY(-2px); }
+.cta-button.ghost { border: 1px solid var(--line-strong); color: var(--teal); background: var(--bg-elevated); }
+.cta-button.ghost:hover { border-color: var(--teal); }
+
+footer { padding: 32px 0; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--muted); background: var(--bg); }
+footer a { color: var(--teal); }
+
+@media (max-width: 1024px) {
+  .compare-grid, .moat-grid { grid-template-columns: 1fr; }
+  .bombshell-grid { grid-template-columns: 1fr; gap: 32px; }
+  .plan-grid { grid-template-columns: 1fr 1fr; }
+  .scorecard-header, .scorecard-row { padding: 14px 20px; }
+}
+@media (max-width: 720px) {
+  .plan-grid { grid-template-columns: 1fr; }
+  .moat-card.luxereal::before, .moat-card.mogul::before { position: static; display: inline-block; margin-bottom: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span class="topbar-tag">Visibility Audit Report &middot; Prepared by AG1 Consulting</span>
+    <span>For Sheikera "Ginger" Coutain</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Prepared for Sheikera Coutain &middot; AG1 Consulting</span>
+        <h1>Two businesses.<br>One personal brand.<br><em>Zero</em> AI search recommendations.</h1>
+        <p>Ginger LuxeReal at 150% sales lift. The Biznesss Mogul ™ for women of color making executive-to-ownership pivots. The dual-credential moat (MBA + PMP + Six Sigma + DEI + REALTOR®) AI search has never heard of, across either vertical.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Sheikera's authority surface: <em>before vs after</em></h2>
+    <p class="section-sub">Same brand. Same dual-credential. Same Margate-to-Palm-Beach LuxeReal practice. Same Biznesss Mogul mentorship community. Two very different chances of being recommended when the right buyer asks ChatGPT tonight.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today &middot; Live Properties</div>
+        <div class="compare-preview current-bg">
+          <div class="compare-preview-content">
+            <h3>gingerluxereal.com + Biznesss Mogul IG</h3>
+            <p>Currently live &middot; Click to view</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>Two genuinely strong brand assets running in parallel without the schema and citation infrastructure either deserves. Personal credentials are exceptional and almost entirely invisible to AI engines.</p>
+          <ul>
+            <li>Both businesses competing for one personal-brand attention surface</li>
+            <li>Limited Service / Review / FAQ schema across either property</li>
+            <li>Zero placements on Real Trends Palm Beach top producer ranking</li>
+            <li>Zero placements on USA Today Career Coaches feature</li>
+            <li>No Forbes Real Estate Council membership</li>
+            <li>No Forbes Coaches Council membership</li>
+            <li>The dual-credential (PMP + Six Sigma + MBA + DEI + REALTOR®) is the moat, and AI engines cannot read it from plain HTML</li>
+            <li>Invisible across all 4 AI question queries we tested</li>
+          </ul>
+          <a href="https://gingerluxereal.com/" target="_blank" rel="noopener" class="compare-cta cta-current">View Live Site &rarr;</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed &middot; Dual-Brand Authority Build</div>
+        <div class="compare-preview new-bg">
+          <div class="compare-preview-content">
+            <h3>Sheikera, search-found</h3>
+            <p>Click to explore the demo &rarr;</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>A coordinated dual-track schema and citation campaign. Each business owns its own niche. The personal-brand layer ties them together as the "executive who actually executed the corporate-to-ownership pivot the program teaches."</p>
+          <ul>
+            <li>Full Person + RealEstateAgent + Service + Review + FAQ schema on both properties</li>
+            <li>Brand separation: distinct primary URLs with cross-linking via personal layer</li>
+            <li>9 pillar content pieces (5 mentorship + 4 real estate)</li>
+            <li>Real estate citation campaign: Real Trends Palm Beach, The Real Deal, Forbes Real Estate Council, Mansion Global, Inman</li>
+            <li>Mentorship citation campaign: USA Today Career Coaches, Forbes Coaches Council, Black Enterprise, Essence, Black Career Women's Network</li>
+            <li>Dual-credential moat surfaced as structured data and as the brand differentiator</li>
+            <li>Performance gate: 2 of 4 AI engine mentions by day 90, or work continues at no additional cost</li>
+          </ul>
+          <a href="../" class="compare-cta cta-new">Open the Demo &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bombshell-section">
+  <div class="container">
+    <div class="bombshell-grid">
+      <div>
+        <div class="bombshell-stat"><em>0</em><span style="font-size: 0.5em; opacity: 0.6">/4</span></div>
+        <div class="bombshell-stat-label">AI Engine Recommendations</div>
+      </div>
+      <div class="bombshell-content">
+        <h2>You're not in <em>either</em> answer.</h2>
+        <p>We asked ChatGPT, Perplexity, and Google's AI Overview the four question-style queries the right buyer in either business actually types. Across all four (two real estate, two mentorship), Sheikera Coutain came up zero times.</p>
+        <p><strong>The lists were dominated by names with weaker credentials than yours.</strong> No competitor in luxury Palm Beach real estate is also a Six Sigma Black Belt with PMP and MBA credentials. No competitor in Black-women career coaching is also closing $1M+ luxury home transactions. The dual-credential is the moat. AI search just can't see it.</p>
+        <div class="queries-list">
+          <div class="queries-list-section">
+            <span class="queries-list-section-label">Real Estate &middot; Ginger LuxeReal</span>
+            <div class="query-item"><span>Best luxury real estate agent Palm Beach Florida?</span><span class="query-x">&times;</span></div>
+            <div class="query-item"><span>Black women luxury real estate brokers Florida?</span><span class="query-x">&times;</span></div>
+          </div>
+          <div class="queries-list-section">
+            <span class="queries-list-section-label">Mentorship &middot; The Biznesss Mogul ™</span>
+            <div class="query-item"><span>Career pivot coach for Black women executives?</span><span class="query-x">&times;</span></div>
+            <div class="query-item"><span>Executive mentorship for women of color?</span><span class="query-x">&times;</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section moat-section">
+  <div class="container">
+    <h2 class="section-title">The <em>dual-credential</em> moat. Two niches. One operator.</h2>
+    <p class="section-sub">A Black woman executive considering the pivot from corporate to luxury real estate has exactly one mentor in the country who has personally executed the move and is currently running an active LuxeReal practice. That's a category-defining position. Today, the structured-data layer doesn't surface it.</p>
+
+    <div class="moat-grid">
+      <div class="moat-card luxereal">
+        <h3>Ginger LuxeReal</h3>
+        <p class="moat-sub">Luxury Florida. The operator-led brokerage.</p>
+        <ul>
+          <li>Margate, Palm Beach, Bal Harbour, Fort Lauderdale, Fisher Island, Miami, Jupiter, Parkland</li>
+          <li>150% sales lift through bespoke client experience</li>
+          <li>REALTOR® with two decades corporate operations leadership</li>
+          <li class="unique">Six Sigma Black Belt + PMP applied to luxury transactions</li>
+          <li class="unique">MBA + DEI-Certified at the listing-presentation level</li>
+          <li>Top luxury Palm Beach agents lead with volume. Sheikera leads with operational rigor.</li>
+        </ul>
+      </div>
+      <div class="moat-card mogul">
+        <h3>The Biznesss Mogul &trade;</h3>
+        <p class="moat-sub">Executive mentorship. The practitioner-led offer.</p>
+        <ul>
+          <li>Women of color making the corporate-to-ownership pivot</li>
+          <li>Strategy, wealth building, leadership, legacy planning</li>
+          <li>Application-based intake (small annual cohort)</li>
+          <li class="unique">Active luxury real estate practice as proof-of-pivot</li>
+          <li class="unique">Two decades Fortune-500 leadership behind the framework</li>
+          <li>Top coaches lead with HR consulting backgrounds. Sheikera leads with the actual pivot, lived.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <h2 class="section-title">The <em>90-day</em> plan.</h2>
+    <p class="section-sub">Four phases. Dual-track citation campaigns. Each business pursues its own oligopoly without diluting the other. By day 90, Sheikera Coutain is a named recommendation in both AI verticals, with at least 6 placements across the dual citation surfaces.</p>
+
+    <div class="plan-grid" style="margin-top: 0;">
+      <div class="plan-card" style="background: rgba(255,255,255,0.04); border-color: rgba(238, 186, 43, 0.2);">
+        <span class="plan-num">&mdash; Phase 01</span>
+        <h4 style="color: var(--gold);">Foundation</h4>
+        <p style="color: rgba(238,237,233,0.78);">Schema deployment on both gingerluxereal.com and Biznesss Mogul property. Brand separation. sameAs entity unification. Wikipedia draft. Search Console wiring.</p>
+        <span class="plan-week" style="color: var(--coral);">Weeks 1&ndash;2</span>
+      </div>
+      <div class="plan-card" style="background: rgba(255,255,255,0.04); border-color: rgba(238, 186, 43, 0.2);">
+        <span class="plan-num">&mdash; Phase 02</span>
+        <h4 style="color: var(--gold);">Dual Citation Campaign</h4>
+        <p style="color: rgba(238,237,233,0.78);">Real estate: Real Trends Palm Beach, The Real Deal, Forbes Real Estate Council, Inman, Mansion Global. Mentorship: USA Today Career Coaches, Forbes Coaches Council, Black Enterprise, Essence, Black Career Women's Network.</p>
+        <span class="plan-week" style="color: var(--coral);">Weeks 2&ndash;8</span>
+      </div>
+      <div class="plan-card" style="background: rgba(255,255,255,0.04); border-color: rgba(238, 186, 43, 0.2);">
+        <span class="plan-num">&mdash; Phase 03</span>
+        <h4 style="color: var(--gold);">Authority Content</h4>
+        <p style="color: rgba(238,237,233,0.78);">9 pillar pieces. The "career-pivot from corporate to luxury real estate" piece is the bridge between both verticals. Margate / Palm Beach / Bal Harbour service-area content on the LuxeReal side.</p>
+        <span class="plan-week" style="color: var(--coral);">Weeks 4&ndash;10</span>
+      </div>
+      <div class="plan-card" style="background: rgba(255,255,255,0.04); border-color: rgba(238, 186, 43, 0.2);">
+        <span class="plan-num">&mdash; Phase 04</span>
+        <h4 style="color: var(--gold);">Reputation Flywheel</h4>
+        <p style="color: rgba(238,237,233,0.78);">Monthly named-result case studies on both sides. AI mention monitoring across 4 engines weekly. Citation maintenance. Application volume + LuxeReal listing volume tracked monthly.</p>
+        <span class="plan-week" style="color: var(--coral);">Weeks 6&ndash;12</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal AI search engines check across both verticals, the current presence graded against the 90-day dual-track rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today</div>
+        <div>After rebuild</div>
+      </div>
+      <div class="scorecard-row"><div class="scorecard-label">Person + Service schema (both properties)</div><div class="scorecard-cell current">Partial</div><div class="scorecard-cell new">&check; Full</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Review schema (named-result testimonials)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Live both sides</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">FAQPage schema (AI search lift)</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; 8+ Q&amp;As both sides</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Brand separation (clear entity disambiguation)</div><div class="scorecard-cell current">Mixed</div><div class="scorecard-cell new">&check; Clean</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Wikipedia / Wikidata entity</div><div class="scorecard-cell current">&times; None</div><div class="scorecard-cell new">&check; Live</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Real Trends Palm Beach top producer ranking</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">Submitted (target)</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">USA Today Career Coaches feature</div><div class="scorecard-cell current">&times; Missing</div><div class="scorecard-cell new">Pitched (target)</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Forbes Real Estate + Coaches Council</div><div class="scorecard-cell current">&times; Neither</div><div class="scorecard-cell new">In progress, both</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">AI engine recommendation rate (combined)</div><div class="scorecard-cell current">0 of 4</div><div class="scorecard-cell new">3 of 4 (target)</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Curated "best of" list placements (combined)</div><div class="scorecard-cell current">0</div><div class="scorecard-cell new">6+</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Major podcast appearances (combined, 90 days)</div><div class="scorecard-cell current">~0</div><div class="scorecard-cell new">6+ booked</div></div>
+      <div class="scorecard-row"><div class="scorecard-label">Authority tier</div><div class="scorecard-cell current">Brand-only</div><div class="scorecard-cell new">Brand + Search</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>The Palm Beach buyer searching tonight,<br>and the executive considering<br>her pivot, <em>both deserve to find you.</em></h2>
+    <p>Today, ChatGPT is sending them to Samantha Curry and Twanna Carter. Ninety days from now, that changes for both. Let's talk.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@andreicopy.net" class="cta-button primary">Book the Strategy Call &rarr;</a>
+      <a href="../" class="cta-button ghost">Open the Demo &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>AG1 Consulting &middot; Andrei Givero &middot; info@andreicopy.net &middot; <a href="https://andrei170.github.io/ag1/">andrei170.github.io/ag1</a></span>
+</footer>
+
+</body>
+</html>
